@@ -1,0 +1,73 @@
+package laboratorio_ejercicio03;
+import javax.swing.JOptionPane;
+
+public class Laboratorio_Ejercicio03 {
+    
+    public static void main(String[] args) {
+       int  categoria ;
+       String categoriaCad ; 
+       String promedioCad;
+       //se inicializo dos variables (pensionueva=0/pensionactual=0.
+       double promedio , pensionueva=0 , pensionactual=0 , descuento;
+        categoriaCad = JOptionPane.showInputDialog(null, "UNIVERSIDAD SAN MARTIN \n" +
+                                                         "SISTEMA DE CATEGORIZACION DEL ALUMNADO\n" +
+                                                          "CATEGORIA      A  [ 1 ]\n" +
+                                                          "CATEGORIA      B  [ 2 ]\n" +
+                                                          "CATEGORIA      C  [ 3 ]\n" +
+                                                          "CATEGORIA      D  [ 4 ]\n","USMP",3);
+       
+       categoria=Integer.parseInt(categoriaCad);
+        
+        switch(categoria)
+        {
+            case 1:
+            {
+            pensionactual=500;
+            break;
+        }
+            case 2:
+            {
+            pensionactual=550;
+            break;
+        }
+            case 3:
+            {
+            pensionactual=460;
+            break; 
+        }
+            case 4:
+            {
+            pensionactual=400;
+            break;
+        }
+        }
+        promedioCad = JOptionPane.showInputDialog(null,"INGRESE EL PROMEDIOPONDERADO"+
+                                                       " DEL ALUMNO "," PORTAL ",3);
+        
+        promedio=Double.parseDouble(promedioCad);
+        //CONDICIONAL DOBLE IF ELSE , SWITCH=MULTIPLE
+        if (promedio<=13.99)
+        {
+            descuento=0;    
+        }else{
+            if (promedio<=15.99)
+            {
+                descuento=0.10*pensionactual;
+            }else{
+                if(promedio<=17.99)
+                {
+                    descuento=0.12*pensionactual;
+                }else{
+                    descuento=0.15*pensionactual;
+            }         
+        }    
+    }
+        pensionueva=pensionactual-descuento;
+        
+      
+        JOptionPane.showMessageDialog(null,"Mi pension Actual es : "+ pensionactual );
+        JOptionPane.showMessageDialog(null,"MI pension Nueva es  : "+ pensionueva);
+        
+        }          
+        
+    }
