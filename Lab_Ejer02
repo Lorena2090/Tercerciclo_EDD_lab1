@@ -1,0 +1,46 @@
+package laboratorioejercicio2;
+import javax.swing.JOptionPane;
+public class LaboratorioEjercicio2 {
+
+    
+    public static void main(String[] args) {
+       
+    long cant;
+    //CADENA (LETRAS),2 VARIABLES
+    String cantab;
+    double desAb, desCd;
+    
+    cantab=JOptionPane.showInputDialog(null,"Ingresa cantidades!!");
+    cant=Integer.parseInt(cantab);
+        
+    if (cant>50)
+    {
+        desAb=0.15*cant*25;     
+    }
+    else
+    {
+        desAb =0;
+    }
+    if (cant>30)
+    {
+    desCd=0.10*cant*27.5;
+    }
+    else
+    {   
+        desCd=0;
+    }
+    
+    //CONDICIONAL DOBLE    
+    if (desAb>desCd) 
+    {
+    JOptionPane.showMessageDialog(null,"CONVIENE LADO A ");
+    }
+    else
+    {
+    JOptionPane.showMessageDialog(null,"CONVIENE LADO B " );
+        
+        }    
+    
+    }
+    
+}
