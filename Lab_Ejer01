@@ -1,0 +1,41 @@
+package laboratorioejercicio1;
+import java.util.Locale;
+import javax.swing.JOptionPane;
+
+public class LaboratorioEjercicio1 {
+//metodo main(3 tipos de datos, 7 variabels)
+    public static void main(String[] args) {
+        int m1,m2,m3;
+        String Prm1,Prm2,Prm3;
+        double Promedio ;
+        
+        Prm1=JOptionPane.showInputDialog(null,"Ingresar primera nota", "LORE",1);
+        Prm2=JOptionPane.showInputDialog(null,"Ingresar segunda nota", "LORE",1);
+        Prm3=JOptionPane.showInputDialog(null,"Ingresar tercera nota", "LORE",1);
+        
+        m1=Integer.parseInt(Prm1);
+        m2=Integer.parseInt(Prm2);
+        m3=Integer.parseInt(Prm3);
+        
+        Promedio = (double)(m1+m2+m3)/3;
+        //condicional simple
+        if (Promedio >=0 && Promedio <=5) 
+        {
+        JOptionPane.showMessageDialog(null,"PESIMO");
+        }
+        if (Promedio >=6 && Promedio <=10)
+        {
+        JOptionPane.showMessageDialog(null,"DEFICIENTE");
+        }
+        if (Promedio >=11 && Promedio <=15)
+        {
+        JOptionPane.showMessageDialog(null,"REGULAR");
+        }
+        if (Promedio >=16 && Promedio <=20)
+        {
+        JOptionPane.showMessageDialog(null,"BUENO");
+        }
+        
+    }
+    
+}
